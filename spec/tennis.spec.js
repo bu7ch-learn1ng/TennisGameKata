@@ -48,8 +48,13 @@ describe("Système de calcul du score au tennis", function() {
 	it("Quand le joueur qui a l'avantage perd le point, le score revient à 'Deuce'", function() {
 		var game = initDeuceGame();
 		game.playerWin(0);
-		expect(game.players[0].advantage).not.toBe.false;
-		expect(game.winner).not.toBe.true;
+		//expect(game.players[0].advantage).not.toBe.false;    FAUX ?
+		//expect(game.winner).not.toBe.true;  				   FAUX ?
+		expect(game.players[0].advantage).toBe(false);
+		expect(game.players[1].advantage).toBe(false);
+		expect(game.winner).not.toBe(0);
+		expect(game.winner).not.toBe(1); 
+
 	})
 	
 	it("Plusieur situations 'Deuce' peuvent s'enchainer sans que le match soit terminé", function() {
