@@ -64,7 +64,7 @@ describe("Système de calcul du score au tennis", function() {
 		var game = initDeuceGame();
 		game.playerWin(1);
 		expect(function(){
-		  game.playerWin(1);
+		  game.playerWin(1)
 		}).toThrowError("game ended");
 	})
 	
